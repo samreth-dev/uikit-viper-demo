@@ -12,6 +12,8 @@
 		53D7918A293877C400CED7DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D79189293877C400CED7DE /* ViewController.swift */; };
 		53D7918F293877C500CED7DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D7918E293877C500CED7DE /* Assets.xcassets */; };
 		53D79192293877C500CED7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D79190293877C500CED7DE /* LaunchScreen.storyboard */; };
+		53D791A12938785900CED7DE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D791A02938785900CED7DE /* APIManager.swift */; };
+		53D791A32938786700CED7DE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D791A22938786700CED7DE /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		53D7918E293877C500CED7DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53D79191293877C500CED7DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53D79193293877C500CED7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D791A02938785900CED7DE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		53D791A22938786700CED7DE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		53D791992938781B00CED7DE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				53D791A02938785900CED7DE /* APIManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 		53D7919A2938782A00CED7DE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				53D791A22938786700CED7DE /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D791A12938785900CED7DE /* APIManager.swift in Sources */,
+				53D791A32938786700CED7DE /* APIService.swift in Sources */,
 				53D7918A293877C400CED7DE /* ViewController.swift in Sources */,
 				53D79186293877C400CED7DE /* AppDelegate.swift in Sources */,
 				53D79188293877C400CED7DE /* SceneDelegate.swift in Sources */,
