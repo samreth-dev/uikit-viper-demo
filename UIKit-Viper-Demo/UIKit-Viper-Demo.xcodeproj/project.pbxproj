@@ -15,6 +15,7 @@
 		53D791A12938785900CED7DE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D791A02938785900CED7DE /* APIManager.swift */; };
 		53D791A32938786700CED7DE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D791A22938786700CED7DE /* APIService.swift */; };
 		53D791A6293878A500CED7DE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D791A5293878A500CED7DE /* APIError.swift */; };
+		53D791A8293878D000CED7DE /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D791A7293878D000CED7DE /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		53D791A02938785900CED7DE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		53D791A22938786700CED7DE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		53D791A5293878A500CED7DE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		53D791A7293878D000CED7DE /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		53D7919B2938782F00CED7DE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				53D791A7293878D000CED7DE /* Todo.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D791A8293878D000CED7DE /* Todo.swift in Sources */,
 				53D791A12938785900CED7DE /* APIManager.swift in Sources */,
 				53D791A32938786700CED7DE /* APIService.swift in Sources */,
 				53D7918A293877C400CED7DE /* ViewController.swift in Sources */,
