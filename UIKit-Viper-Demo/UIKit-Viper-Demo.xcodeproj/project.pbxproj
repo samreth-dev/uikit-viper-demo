@@ -54,6 +54,13 @@
 		53D79184293877C400CED7DE /* UIKit-Viper-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				53D7919F2938783F00CED7DE /* Presenters */,
+				53D7919E2938783A00CED7DE /* Views */,
+				53D7919D2938783700CED7DE /* Routers */,
+				53D7919C2938783200CED7DE /* Interactors */,
+				53D7919B2938782F00CED7DE /* Entities */,
+				53D7919A2938782A00CED7DE /* Services */,
+				53D791992938781B00CED7DE /* Managers */,
 				53D79185293877C400CED7DE /* AppDelegate.swift */,
 				53D79187293877C400CED7DE /* SceneDelegate.swift */,
 				53D79189293877C400CED7DE /* ViewController.swift */,
@@ -62,6 +69,55 @@
 				53D79193293877C500CED7DE /* Info.plist */,
 			);
 			path = "UIKit-Viper-Demo";
+			sourceTree = "<group>";
+		};
+		53D791992938781B00CED7DE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		53D7919A2938782A00CED7DE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		53D7919B2938782F00CED7DE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		53D7919C2938783200CED7DE /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		53D7919D2938783700CED7DE /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		53D7919E2938783A00CED7DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		53D7919F2938783F00CED7DE /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
