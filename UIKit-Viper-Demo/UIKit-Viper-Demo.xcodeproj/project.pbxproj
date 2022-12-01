@@ -14,6 +14,7 @@
 		53D79192293877C500CED7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D79190293877C500CED7DE /* LaunchScreen.storyboard */; };
 		53D791A12938785900CED7DE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D791A02938785900CED7DE /* APIManager.swift */; };
 		53D791A32938786700CED7DE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D791A22938786700CED7DE /* APIService.swift */; };
+		53D791A6293878A500CED7DE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D791A5293878A500CED7DE /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		53D79193293877C500CED7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53D791A02938785900CED7DE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		53D791A22938786700CED7DE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		53D791A5293878A500CED7DE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		53D79184293877C400CED7DE /* UIKit-Viper-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				53D791A42938789800CED7DE /* Errors */,
 				53D7919F2938783F00CED7DE /* Presenters */,
 				53D7919E2938783A00CED7DE /* Views */,
 				53D7919D2938783700CED7DE /* Routers */,
@@ -124,6 +127,14 @@
 			children = (
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		53D791A42938789800CED7DE /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				53D791A5293878A500CED7DE /* APIError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				53D7918A293877C400CED7DE /* ViewController.swift in Sources */,
 				53D79186293877C400CED7DE /* AppDelegate.swift in Sources */,
 				53D79188293877C400CED7DE /* SceneDelegate.swift in Sources */,
+				53D791A6293878A500CED7DE /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,8 +22,3 @@ struct APIService: APIServiceProtocol {
         }
     }
 }
-
-enum APIError: Error {
-    case failedFetching
-    case failedToGetTodo
-}
