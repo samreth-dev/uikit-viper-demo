@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		531E872D29395FE50066B511 /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E872C29395FE50066B511 /* ViewControllerPresenter.swift */; };
+		531E872F29395FF60066B511 /* ViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E872E29395FF60066B511 /* ViewControllerInteractor.swift */; };
+		531E8731293960090066B511 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E8730293960090066B511 /* TempViewController.swift */; };
+		531E87332939602B0066B511 /* ViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E87322939602B0066B511 /* ViewControllerRouter.swift */; };
 		53D79186293877C400CED7DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D79185293877C400CED7DE /* AppDelegate.swift */; };
 		53D79188293877C400CED7DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D79187293877C400CED7DE /* SceneDelegate.swift */; };
 		53D7918A293877C400CED7DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D79189293877C400CED7DE /* ViewController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		531E872C29395FE50066B511 /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
+		531E872E29395FF60066B511 /* ViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInteractor.swift; sourceTree = "<group>"; };
+		531E8730293960090066B511 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		531E87322939602B0066B511 /* ViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRouter.swift; sourceTree = "<group>"; };
 		53D79182293877C400CED7DE /* UIKit-Viper-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-Viper-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D79185293877C400CED7DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53D79187293877C400CED7DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		531E8734293960350066B511 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				53D7918E293877C500CED7DE /* Assets.xcassets */,
+				53D79193293877C500CED7DE /* Info.plist */,
+				53D79190293877C500CED7DE /* LaunchScreen.storyboard */,
+				53D79185293877C400CED7DE /* AppDelegate.swift */,
+				53D79187293877C400CED7DE /* SceneDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		53D79179293877C400CED7DE = {
 			isa = PBXGroup;
 			children = (
@@ -62,20 +82,15 @@
 		53D79184293877C400CED7DE /* UIKit-Viper-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				53D791A42938789800CED7DE /* Errors */,
-				53D7919F2938783F00CED7DE /* Presenters */,
 				53D7919E2938783A00CED7DE /* Views */,
-				53D7919D2938783700CED7DE /* Routers */,
 				53D7919C2938783200CED7DE /* Interactors */,
+				53D7919F2938783F00CED7DE /* Presenters */,
 				53D7919B2938782F00CED7DE /* Entities */,
+				53D7919D2938783700CED7DE /* Routers */,
 				53D7919A2938782A00CED7DE /* Services */,
 				53D791992938781B00CED7DE /* Managers */,
-				53D79185293877C400CED7DE /* AppDelegate.swift */,
-				53D79187293877C400CED7DE /* SceneDelegate.swift */,
-				53D79189293877C400CED7DE /* ViewController.swift */,
-				53D7918E293877C500CED7DE /* Assets.xcassets */,
-				53D79190293877C500CED7DE /* LaunchScreen.storyboard */,
-				53D79193293877C500CED7DE /* Info.plist */,
+				53D791A42938789800CED7DE /* Errors */,
+				531E8734293960350066B511 /* App */,
 			);
 			path = "UIKit-Viper-Demo";
 			sourceTree = "<group>";
@@ -107,6 +122,7 @@
 		53D7919C2938783200CED7DE /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				531E872E29395FF60066B511 /* ViewControllerInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -114,6 +130,7 @@
 		53D7919D2938783700CED7DE /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				531E87322939602B0066B511 /* ViewControllerRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -121,6 +138,8 @@
 		53D7919E2938783A00CED7DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53D79189293877C400CED7DE /* ViewController.swift */,
+				531E8730293960090066B511 /* TempViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +147,7 @@
 		53D7919F2938783F00CED7DE /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				531E872C29395FE50066B511 /* ViewControllerPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -216,7 +236,11 @@
 				53D7918A293877C400CED7DE /* ViewController.swift in Sources */,
 				53D79186293877C400CED7DE /* AppDelegate.swift in Sources */,
 				53D79188293877C400CED7DE /* SceneDelegate.swift in Sources */,
+				531E8731293960090066B511 /* TempViewController.swift in Sources */,
+				531E87332939602B0066B511 /* ViewControllerRouter.swift in Sources */,
 				53D791A6293878A500CED7DE /* APIError.swift in Sources */,
+				531E872F29395FF60066B511 /* ViewControllerInteractor.swift in Sources */,
+				531E872D29395FE50066B511 /* ViewControllerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
