@@ -8,22 +8,39 @@
 import UIKit
 
 class TempViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    private var textLabel: UILabel!
+    private var text: String?
+    
+    init(text: String?) {
+        self.text = text
+        super.init(nibName: nil, bundle: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initViews()
+        setup()
     }
-    */
-
+    
+    private func initViews() {
+        textLabel = UILabel()
+        view.addSubview(textLabel)
+    }
+    
+    private func setup() {
+        view.backgroundColor = .white
+        textLabel.text = text
+        textLabel.textColor = .systemBlue
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        textLabel.frame = view.bounds
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
