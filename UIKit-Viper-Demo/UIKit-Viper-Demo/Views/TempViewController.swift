@@ -8,7 +8,6 @@
 import UIKit
 
 class TempViewController: UIViewController {
-    
     private var textLabel: UILabel!
     private var text: String?
     
@@ -17,30 +16,32 @@ class TempViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
         setup()
     }
     
-    private func initViews() {
-        textLabel = UILabel()
-        view.addSubview(textLabel)
-    }
-    
-    private func setup() {
-        view.backgroundColor = .white
-        textLabel.text = text
-        textLabel.textColor = .systemBlue
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         textLabel.frame = view.bounds
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+}
+
+//MARK: setups
+private extension TempViewController {
+    func initViews() {
+        textLabel = UILabel()
+        view.addSubview(textLabel)
     }
     
+    func setup() {
+        view.backgroundColor = .white
+        textLabel.text = text
+        textLabel.textColor = .systemBlue
+    }
 }

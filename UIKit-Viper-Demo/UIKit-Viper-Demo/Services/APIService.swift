@@ -11,7 +11,7 @@ protocol APIServiceProtocol {
     func fetch<T: Decodable>(dataType: T.Type) async throws -> T
 }
 
-struct APIService: APIServiceProtocol {
+class APIService: APIServiceProtocol {
     func fetch<T>(dataType: T.Type) async throws -> T where T : Decodable {
         do {
             let (data, _) = try await URLSession.shared.data(from: URL(string: "https://jsonplaceholder.typicode.com/todos")!)

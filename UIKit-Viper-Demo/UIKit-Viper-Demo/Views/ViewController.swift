@@ -9,15 +9,18 @@ import UIKit
 import Combine
 
 class ViewController: UIViewController {
-    
     private var tableView: UITableView!
-    private let presenter: ViewControllerPresenter
     private var cancellable: Set<AnyCancellable>
+    private var presenter: ViewControllerPresenterProtocol
     
-    init(presenter: ViewControllerPresenter, cancellable: Set<AnyCancellable>) {
+    init(presenter: ViewControllerPresenterProtocol, cancellable: Set<AnyCancellable>) {
         self.presenter = presenter
         self.cancellable = cancellable
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -28,54 +31,48 @@ class ViewController: UIViewController {
         presenter.didInit()
     }
     
-    private func initViews() {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
+}
+
+//MARK: setups
+private extension ViewController {
+    func initViews() {
         tableView = UITableView()
         view.addSubview(tableView)
     }
     
-    private func setup() {
+    func setup() {
         title = "Todo List"
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
-    private func binding() {
-        presenter.$todos.receive(on: DispatchQueue.main).sink { [weak self] todos in
+    func binding() {
+        presenter.publisher.receive(on: DispatchQueue.main).sink { [weak self] todos in
             self?.tableView.reloadData()
         }
         .store(in: &cancellable)
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
 }
 
 extension ViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.todos.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = presenter.todos[indexPath.row].title
         return cell
     }
-    
-    
 }
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.didClick(row: indexPath.row, viewController: self)
+        presenter.didClick(row: indexPath.row)
     }
 }

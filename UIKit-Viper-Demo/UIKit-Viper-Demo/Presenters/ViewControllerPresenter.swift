@@ -7,13 +7,20 @@
 
 import Foundation
 
-class ViewControllerPresenter {
-    
+protocol ViewControllerPresenterProtocol {
+    var todos: [Todo] { get set }
+    var publisher: Published<[Todo]>.Publisher { get }
+    func didInit()
+    func didClick(row: Int)
+}
+
+class ViewControllerPresenter: ViewControllerPresenterProtocol {
     @Published var todos: [Todo]
-    private let interactor: ViewControllerInteractor
-    private let router: ViewControllerRouter
+    var publisher: Published<[Todo]>.Publisher { $todos }
+    private let interactor: ViewControllerInteractorProtocol
+    private let router: ViewControllerRouterProtocol
     
-    init(todos: [Todo], interactor: ViewControllerInteractor, router: ViewControllerRouter) {
+    init(todos: [Todo], interactor: ViewControllerInteractorProtocol, router: ViewControllerRouterProtocol) {
         self.todos = todos
         self.interactor = interactor
         self.router = router
@@ -29,8 +36,7 @@ class ViewControllerPresenter {
         }
     }
     
-    func didClick(row: Int, viewController: ViewController) {
-        router.route(viewController: viewController, text: todos[row].title)
+    func didClick(row: Int) {
+        router.route(text: todos[row].title)
     }
-    
 }

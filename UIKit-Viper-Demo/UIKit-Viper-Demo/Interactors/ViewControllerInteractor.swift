@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct ViewControllerInteractor {
-    
+protocol ViewControllerInteractorProtocol {
+    func getTodos() async throws -> [Todo]
+}
+
+class ViewControllerInteractor: ViewControllerInteractorProtocol {
     private let apiManager: APIManagerProtocol
     
     init(apiManager: APIManagerProtocol) {
@@ -22,5 +25,4 @@ struct ViewControllerInteractor {
             throw APIError.failedToGetTodo
         }
     }
-    
 }

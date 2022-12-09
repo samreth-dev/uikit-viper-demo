@@ -11,8 +11,7 @@ protocol APIManagerProtocol {
     func getTodos() async throws -> [Todo]
 }
 
-struct APIManager: APIManagerProtocol {
-    
+class APIManager: APIManagerProtocol {
     private let apiService: APIServiceProtocol
     
     init(apiService: APIServiceProtocol) {
@@ -26,5 +25,4 @@ struct APIManager: APIManagerProtocol {
             throw APIError.failedToGetTodo
         }
     }
-    
 }
