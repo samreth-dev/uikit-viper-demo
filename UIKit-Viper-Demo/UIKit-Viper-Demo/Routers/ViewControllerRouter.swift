@@ -12,9 +12,11 @@ protocol ViewControllerRouterProtocol {
     func route(text: String?)
 }
 
-class ViewControllerRouter: ViewControllerRouterProtocol {
+class ViewControllerRouter {
     var viewController: UIViewController? = nil
-    
+}
+
+extension ViewControllerRouter: ViewControllerRouterProtocol {
     func route(text: String?) {
         let tempViewController = TempViewController(text: text)
         viewController?.navigationController?.pushViewController(tempViewController, animated: true)
