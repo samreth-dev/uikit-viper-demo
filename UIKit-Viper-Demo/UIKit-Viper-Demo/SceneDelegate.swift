@@ -18,8 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let interactor = ViewControllerInteractor(apiManager: apiManager)
         
         let router = ViewControllerRouter()
-        let presenter = ViewControllerPresenter(todos: [], interactor: interactor, router: router)
-        let viewController = ViewController(presenter: presenter, cancellable: [])
+        let presenter = ViewControllerPresenter(todos: [], cancellable: [], interactor: interactor, router: router)
+        let viewController = ViewController(presenter: presenter)
         
         let navigationController = UINavigationController(rootViewController: viewController)
         
