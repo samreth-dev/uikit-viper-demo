@@ -6,16 +6,13 @@
 //
 
 import UIKit
-import Combine
 
 class ViewController: UIViewController {
     private var tableView: UITableView!
-    private var cancellable: Set<AnyCancellable>
     private var presenter: ViewControllerPresenterProtocol
     
-    init(presenter: ViewControllerPresenterProtocol, cancellable: Set<AnyCancellable>) {
+    init(presenter: ViewControllerPresenterProtocol) {
         self.presenter = presenter
-        self.cancellable = cancellable
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -55,10 +52,11 @@ private extension ViewController {
         presenter.publisher.receive(on: DispatchQueue.main).sink { [weak self] todos in
             self?.tableView.reloadData()
         }
-        .store(in: &cancellable)
+        .store(in: &presenter.cancellable)
     }
 }
 
+//MARK: datasource & delegate
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.todos.count
