@@ -11,13 +11,15 @@ protocol APIManagerProtocol {
     func getTodos() async throws -> [Todo]
 }
 
-class APIManager: APIManagerProtocol {
+class APIManager {
     private let apiService: APIServiceProtocol
     
     init(apiService: APIServiceProtocol) {
         self.apiService = apiService
     }
-    
+}
+
+extension APIManager: APIManagerProtocol {
     func getTodos() async throws -> [Todo] {
         do {
             return try await apiService.fetch(dataType: [Todo].self)
