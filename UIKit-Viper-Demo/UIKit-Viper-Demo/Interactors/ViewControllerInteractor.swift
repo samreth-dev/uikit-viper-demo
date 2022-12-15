@@ -11,13 +11,15 @@ protocol ViewControllerInteractorProtocol {
     func getTodos() async throws -> [Todo]
 }
 
-class ViewControllerInteractor: ViewControllerInteractorProtocol {
+class ViewControllerInteractor {
     private let apiManager: APIManagerProtocol
     
     init(apiManager: APIManagerProtocol) {
         self.apiManager = apiManager
     }
-    
+}
+
+extension ViewControllerInteractor: ViewControllerInteractorProtocol {
     func getTodos() async throws -> [Todo] {
         do {
             return try await apiManager.getTodos()
